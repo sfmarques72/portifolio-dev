@@ -309,7 +309,7 @@
   .snake {
     width: 20px;  /* Aumentei de 20px para 30px */
     height: 20px; /* Aumentei de 20px para 30px */
-    background-color: rgb(3, 3, 3);
+    background-color:orange;
     border-radius: 50%;
     position: absolute;
   }
