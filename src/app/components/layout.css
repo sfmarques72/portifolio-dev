@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+
+
+:root {
+    --primary-color: #FF6F00;  /* Laranja principal */
+    --secondary-color: #1C1C1C; /* Preto */
+    --accent-color: #E0E0E0;   /* Cinza claro */
+    --text-color: #FFFFFF;      /* Branco */
+    --dark-gray: #2B2B2B;  /* Preto mais suave */
+  }
+.conteiner-barra{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;
+    background-color: var(--secondary-color);
+    user-select: none; /* Impede a seleção */
+    .barradeopcao{
+        display: flex;
+        justify-content: right ;
+        text-align: center; 
+        height: 100%;
+        width: 100%;
+        margin-right: 15px;
+        & ul{ 
+            list-style: none; 
+            padding: 0; 
+            margin: 0; 
+            display: flex; 
+            gap: 10px; 
+        }
+        & .list-ac{
+            font-family: 'Fira Code', monospace;
+            border: 16px;
+            align-items: center;
+            font-size: 15px;
+            color: var(--text-color);
+            cursor: pointer;
+            padding: 10px;
+        }
+        & .list-ac:hover{
+            background-color:var(--primary-color);
+            border-radius: 10px;
+            border-radius: 16px;
+            color: var(--secondary-color);
+        }
+    }
+    & .s-letra{
+        width: 5%;
+        margin-top: 2px;
+        margin-left: 50px;
+        text-align: center;
+      
+    }
+}
+.conteiner-destaque{
+    display: flex;
+    max-height: 800px;
+    background-color: var(--dark-gray); /* Cor de fundo sólida */
+    justify-content: center;
+    user-select: none; /* Impede a seleção */
+    
+   & .conteiner-img-destaque{
+        display: flex;
+        align-items: end;
+        height: 585px;
+        & .img-destaque{
+            margin-top: 55px;
+            margin-right: 15px;
+            justify-content: left;
+            align-items: end;
+            border-top-left-radius: 20%; 
+            border-top-right-radius: 20%; 
+            background-color:var(--secondary-color);
+        }
+    }
+   & .ola-mundo{
+    margin: 0; 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+   & h1{
+        display: flex;
+        align-items: center;
+        font-family: 'Bangers', cursive;
+        font-size: 90px;
+        color: var(--primary-color);
+        }
+    & p{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-family: 'Fira Code', monospace;
+        font-size: 18px;
+        color: var(--accent-color);
+        background-color: var(--secondary-color);
+        border-radius: 16px;
+    }
+    }
+} 
+.conteiner-imagem-ste{
+    display: flex;
+    background-color: var(--accent-color);
+    user-select: none;
+    justify-content: center;
+    text-align: center;
+    padding: 5px;
+    height: 649px;
+    width: 100%;
+    
+    & .ste-img{
+        display: grid;
+        flex-shrink: 0; 
+        margin-top: 150px;
+        width: 250px; 
+        height: 250px;
+        border-radius: 80%; 
+        overflow: hidden; 
+        margin-left: 25px;
+        border-top-left-radius: 20%; 
+        background-color: var(--secondary-color);
+    }
+    & h1{
+        margin: 28px;
+        flex-shrink: 0; 
+        display: flex;
+        font-family: 'Bangers', cursive;
+        font-size: 50px;
+        color: var(--primary-color);
+        align-items: center;
+
+    }
+    & p{
+        padding: 10px;
+        margin: 15px;
+        text-align: left;
+        font-family: 'Fira Code', monospace;
+        font-size: 18px;
+        color: var(--secondary-color);
+        background-color: var(--text-color);
+        border-radius: 16px;
+        
+    }
+    & button{
+        padding: 10px;
+        margin: 20px;
+        font-size: 18px;
+        border-radius: 50px;
+        font-family: 'Fira Code', monospace;
+        background-color: var(--primary-color);
+        color: var(--text-color);
+        cursor: pointer;
+    }
+    & button:hover{
+        background-color: orange;
+    }
+    & h2{
+        margin: 15px;
+        flex-shrink: 0; 
+        display: flex;
+        font-family: 'Bangers', cursive;
+        font-size: 26px;
+        color: var(--primary-color);
+        align-items: center;
+
+    }
+    & .elementos{
+        margin: 15px;
+        display: flex;
+        width: 30%;
+        flex-direction: row;
+    }
+}
+.conteiner-projeto {
+    user-select: none; /* Impede a seleção */
+    display: flex;
+    height: 649px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-gray);
+        object-fit: cover;
+        & .projetos-realizados{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 70%;
+            height: 50%;
+            gap: 5px;
+            & .cards-projetin{
+                width: 150px;
+                padding: 20px;
+                border-radius: 16px;
+                justify-content: center;
+                align-items: center;
+                background-color: var(--accent-color);
+            }
+           & button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 10px;
+            border-radius: 50px;
+            font-family: 'Fira Code', monospace;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            cursor: pointer;
+            }
+            & button:hover{
+                background-color: orange;
+            }
+        }
+    & h1{
+        justify-content: center;
+    }
+      & .h1-projeto{
+        margin-top: 83px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        flex-shrink: 0; 
+        font-family: 'Bangers', cursive;
+        font-size: 90px;
+        color: var(--primary-color);
+    } 
+    & .conteiner-imagem-projeto{
+        display: flex;
+        user-select: none; /* Impede a seleção */
+        justify-content:right ;
+        overflow: hidden; 
+        align-items: center;
+        width: 30%;
+        height: auto;
+
+        & .ste-img{
+            margin-top: 82px;
+            height: 345px;
+            width: 100%;
+            border-top-left-radius: 40%; 
+            background-color: var(--secondary-color);
+        }
+    }
+}
+.conteiner-experiencia{
+    user-select: none; /* Impede a seleção */
+    display: flex;
+    height: 649px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color);
+
+    & .imag-experiencia{
+        display: flex;
+        width: 100%;
+        z-index: 2;
+        border-top-left-radius: 40%; 
+        background-color: var(--dark-gray);
+    }
+
+    & .texto-ex{
+        justify-items: center;
+        align-items: center;
+        z-index: 3;
+        width: 60%;
+        color: var(--text-color);
+    }
+}
+.conteiner-contato{
+    z-index: 1;
+    user-select: none; /* Impede a seleção */
+    display: flex;
+    height: 649px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    & .icons{
+        margin-right: 450px;
+    }
+    & ul{ 
+        list-style: none; 
+        padding: 0; 
+        margin: 0; 
+        display: flex; 
+        gap: 10px; 
+    }
+    & .link{
+        width: 250px;
+        height: 252px;
+    }
+    & .git{
+        margin-top: 20px;
+        width: 210px;
+        height: 150px;
+    }
+}
+
+.game-area {
+    display: flex;
+    height: 649px;
+    width: 100%;
+    position: relative;
+    background-color: var(--primary-color);
+  }
+  
+  .snake {
+    width: 20px;  /* Aumentei de 20px para 30px */
+    height: 20px; /* Aumentei de 20px para 30px */
+    background-color: rgb(3, 3, 3);
+    border-radius: 50%;
+    position: absolute;
+  }
+  .food {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+  }
