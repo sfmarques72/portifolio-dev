@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 export default function Sobremim() {
   return (
     <div>
@@ -26,7 +27,7 @@ export default function Sobremim() {
         <div>
         </div>
     </div>  
-      <button>Minha trajetoria</button>
+
 
     </div>
 

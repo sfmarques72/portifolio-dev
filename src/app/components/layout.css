@@ -9,12 +9,14 @@
     --text-color: #FFFFFF;      /* Branco */
     --dark-gray: #2B2B2B;  /* Preto mais suave */
   }
+  main{
+    background-color: #000000;
+  }
 .conteiner-barra{
     display: flex;
     justify-content: center;
     overflow: hidden;
     align-items: center;
-    background-color: var(--secondary-color);
     user-select: none; /* Impede a seleção */
     .barradeopcao{
         display: flex;
@@ -56,42 +58,55 @@
 }
 .conteiner-destaque{
     display: flex;
-    max-height: 800px;
-    background-color: var(--dark-gray); /* Cor de fundo sólida */
     justify-content: center;
+    align-items: center;
     user-select: none; /* Impede a seleção */
     
    & .conteiner-img-destaque{
         display: flex;
-        align-items: end;
-        height: 585px;
+        height: 100%;
+        width: 100%;
+        padding: 10px;
+        justify-content: right;
         & .img-destaque{
-            margin-top: 55px;
-            margin-right: 15px;
+            width: 600px;
+            height: 100%;
             justify-content: left;
             align-items: end;
-            border-top-left-radius: 20%; 
-            border-top-right-radius: 20%; 
+            border-radius: 20%;
             background-color:var(--secondary-color);
+            overflow: hidden;
+                & img{
+                width: 100%;
+                object-fit: cover;
+            }
         }
     }
    & .ola-mundo{
-    margin: 0; 
-    display: flex;
-    justify-content: center;
+    width: 100%;
+    height: 100%;
+    align-items: start;
+    display: grid;
+    padding-left: 150px;
+    justify-content: left;
     flex-direction: column;
     
    & h1{
         display: flex;
+        width: 100%;
+        height: 100%;
         align-items: center;
         font-family: 'Bangers', cursive;
         font-size: 90px;
         color: var(--primary-color);
+        animation: bateVolta 2s ease-in-out infinite;
         }
     & p{
         display: flex;
         justify-content: center;
         text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
         font-family: 'Fira Code', monospace;
         font-size: 18px;
         color: var(--accent-color);
@@ -102,24 +117,23 @@
 } 
 .conteiner-imagem-ste{
     display: flex;
-    background-color: var(--accent-color);
     user-select: none;
     justify-content: center;
     text-align: center;
-    padding: 5px;
-    height: 649px;
+    padding: 60px;
+    height: 100%;
     width: 100%;
     
     & .ste-img{
         display: grid;
         flex-shrink: 0; 
         margin-top: 150px;
-        width: 250px; 
-        height: 250px;
+        width: 360px; 
+        height: 360px;
         border-radius: 80%; 
         overflow: hidden; 
-        margin-left: 25px;
-        border-top-left-radius: 20%; 
+        margin: 25px;
+        border-radius: 18%;
         background-color: var(--secondary-color);
     }
     & h1{
@@ -176,26 +190,28 @@
 .conteiner-projeto {
     user-select: none; /* Impede a seleção */
     display: flex;
-    height: 649px;
+    height: 100%;
     width: 100%;
     justify-content: center;
     align-items: center;
-    background-color: var(--dark-gray);
         object-fit: cover;
         & .projetos-realizados{
+            margin-top:50px ;
             display: flex;
             flex-direction: row;
             justify-content: center;
             flex-wrap: wrap;
-            width: 70%;
+            width: 100%;
             height: 50%;
             gap: 5px;
             & .cards-projetin{
-                width: 150px;
+                width: 400px;
+                height: 400px;
                 padding: 20px;
                 border-radius: 16px;
                 justify-content: center;
                 align-items: center;
+                cursor: pointer;
                 background-color: var(--accent-color);
             }
            & button {
@@ -250,7 +266,6 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    background-color: var(--secondary-color);
 
     & .imag-experiencia{
         display: flex;
@@ -276,7 +291,6 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    background-color: var(--primary-color);
     & .icons{
         margin-right: 450px;
     }
@@ -303,7 +317,6 @@
     height: 649px;
     width: 100%;
     position: relative;
-    background-color: var(--primary-color);
   }
   
   .snake {
@@ -319,3 +332,29 @@
     position: absolute;
     background-color: rgb(255, 255, 255);
   }
+
+  @keyframes mover {
+    0%   { transform: translateX(0px); }
+    100% { transform: translateX(200px); }
+  }
+
+  @keyframes bateVolta {
+    0%   { transform: translateX(0); }
+    30%  { transform: translateX(100px); }
+    50%  { transform: translateX(100px) scale(1.05); } /* levemente maior no impacto */
+    70%  { transform: translateX(0); }
+    100% { transform: translateX(0); }
+  }
+
+
+  .fade-in {
+    opacity: 0;
+    transform: translate(20px,0px);
+    transition: opacity 3s ease-out, transform 3s ease-out;
+  }
+  
+  .visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
